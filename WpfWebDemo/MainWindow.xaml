@@ -9,7 +9,7 @@
     <Window.Resources>
         <ControlTemplate x:Key="buttonTemplate" TargetType="{x:Type Button}">
             <Border x:Name="border" BorderBrush="BlanchedAlmond" Background="black" 
-                    BorderThickness="1.5" CornerRadius="2" TextBlock.TextAlignment="Center"
+                    BorderThickness="4" CornerRadius="2" TextBlock.TextAlignment="Center"
                     TextBlock.Foreground="Red" TextBlock.FontStyle="Italic" Width="100" TextBlock.FontSize="20">
  <ContentPresenter RecognizesAccessKey="True" Margin="{TemplateBinding Padding}" />
             </Border>
