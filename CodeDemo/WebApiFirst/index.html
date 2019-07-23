@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Product App</title>
+</head>
+<body>
+
+    <div>
+        <h2>All Products</h2>
+        <ul id="products" />
+    </div>
+    <div>
+        <h2>Search by ID</h2>
+        <input type="text" id="prodId" size="5" />
+        <input type="button" value="Search" onclick="find();" />
+        <input type="button" value="post" onclick="post();" />
+        <p id="product" />
+    </div>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.js"></script>
+    <script>
+        var uri = 'api/products';
+
+        $(document).ready(function () {
+            // Send an AJAX request
+            $.getJSON(uri)
+                .done(function (data) {
+                    // On success, 'data' contains a list of products.
+                    $.each(data, function (key, item) {
+                        // Add a list item for the product.
+                        $('<li>', { text: formatItem(item) }).appendTo($('#products'));
+                    });
+                });
+        });
+
+        function formatItem(item) {
+            return item.Name + ': $' + item.Price;
+        }
+
+        function find() {
+            var id = $('#prodId').val();
+            $.getJSON(uri + '/' + id)
+                .done(function (data) {
+                    $('#product').text(formatItem(data));
+                })
+                .fail(function (jqXHR, textStatus, err) {
+                    $('#product').text('Error: ' + err);
+                });
+        }
+
+        function post() {
+            var id = $('#prodId').val();
+            var url1 = "api/test/update/";
+            var dd = {};
+            dd.value = "gg";
+            dd.value1 = "gg";
+            dd.value2 = "gg";
+            dd.value3 = "gg";
+            dd.value4 = "gg";
+            $.ajax({
+                url :url1,
+                type: 'POST',
+                contenttype:'application/json',
+                datetype: 'json',
+                data: dd,
+                success: function (data) {
+                    console.log(JSON.stringify(data));
+                }
+            });
+        }
+    </script>
+</body>
+</html>

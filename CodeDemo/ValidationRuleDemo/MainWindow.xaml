@@ -1,0 +1,70 @@
+﻿<Window x:Class="ValidationRuleDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ValidationRuleDemo"
+        xmlns:viewmodels="clr-namespace:ValidationRuleDemo.ViewModels"
+        xmlns:validationrules="clr-namespace:ValidationRuleDemo.ValidationRules"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="321.618" Width="425.441">
+
+    <Grid>
+        <Grid.DataContext>
+            <viewmodels:MainWindowViewModel/>
+        </Grid.DataContext>
+        <Grid.Resources>
+           
+            <ControlTemplate x:Key="validationErrorTemplate">
+                <DockPanel>
+                    <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+                        <Grid Width="14" Height="14">
+                            <Ellipse Width="14" Height="14" HorizontalAlignment="Center" VerticalAlignment="Center" Stroke="Red"/>
+                            <Line X1="2" Y1="2" X2="12" Y2="12" Stroke="Red" StrokeThickness="1"></Line>
+                            <Line X1="2" Y1="12" X2="12" Y2="2" Stroke="Red" StrokeThickness="1"></Line>
+                            <!--<TextBlock Foreground="White" FontWeight="Heavy" 
+
+            FontSize="8" HorizontalAlignment="Center" 
+
+            VerticalAlignment="Center" TextAlignment="Center"
+
+                       ToolTip="{Binding ElementName=ErrorAdorner, 
+                       Path=AdornedElement.(Validation.Errors)[0].ErrorContent}"
+
+                       >X</TextBlock>-->
+                        </Grid>
+                        <TextBlock Foreground="Red"  Margin="2,0,0,0" 
+                                   Text="{Binding ElementName=ErrorAdorner, Path=AdornedElement.(Validation.Errors)[0].ErrorContent}"
+                   ></TextBlock>
+                    </StackPanel>
+                    <AdornedElementPlaceholder x:Name="ErrorAdorner" />
+                </DockPanel>
+            </ControlTemplate>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Label Content="Name"/>
+            <TextBox Width="100" Validation.ErrorTemplate="{StaticResource validationErrorTemplate}">
+                <TextBox.Text>
+                    <Binding Path="Name" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <validationrules:NameValidator></validationrules:NameValidator>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Label Content="Name"/>
+            <TextBox Width="100"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Label Content="Name"/>
+            <TextBox Width="100"></TextBox>
+        </StackPanel>
+    </Grid>
+</Window>

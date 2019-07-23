@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="ConsoleAppNHibernateDemo" namespace="ConsoleAppNHibernateDemo.Models">
+  <class name="Emp" table="Emp">
+    <id name="EmpId">
+      <generator class="native"/>
+    </id>
+    <property name="EmpName"></property>
+    <!--<property name="EmpDate"></property>-->
+  </class>
+</hibernate-mapping>

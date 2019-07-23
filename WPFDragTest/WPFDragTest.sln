@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28922.388
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFDragTest", "WPFDragTest\WPFDragTest.csproj", "{ED9ECEC1-347F-4019-825A-DC42A870345F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfEventRoutedTest", "WpfEventRoutedTest\WpfEventRoutedTest.csproj", "{16BCD4C7-05D6-4A4E-B42F-3A2967C6338F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppZoomAndPanning", "WpfAppZoomAndPanning\WpfAppZoomAndPanning.csproj", "{0775AA94-D942-49D8-9E3A-8D091D28EE63}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppNHibernateDemo", "ConsoleAppNHibernateDemo\ConsoleAppNHibernateDemo.csproj", "{6F488E5F-6024-4D8A-ACD7-1778AD7BF041}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppEFDemo", "ConsoleAppEFDemo\ConsoleAppEFDemo.csproj", "{344D3AA9-6B98-44B2-A971-47841D84199C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppEFExistingDBDemo", "ConsoleAppEFExistingDBDemo\ConsoleAppEFExistingDBDemo.csproj", "{3E18995C-47F5-43A8-9604-EB0F91E618A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED9ECEC1-347F-4019-825A-DC42A870345F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED9ECEC1-347F-4019-825A-DC42A870345F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED9ECEC1-347F-4019-825A-DC42A870345F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED9ECEC1-347F-4019-825A-DC42A870345F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16BCD4C7-05D6-4A4E-B42F-3A2967C6338F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16BCD4C7-05D6-4A4E-B42F-3A2967C6338F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16BCD4C7-05D6-4A4E-B42F-3A2967C6338F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16BCD4C7-05D6-4A4E-B42F-3A2967C6338F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0775AA94-D942-49D8-9E3A-8D091D28EE63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0775AA94-D942-49D8-9E3A-8D091D28EE63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0775AA94-D942-49D8-9E3A-8D091D28EE63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0775AA94-D942-49D8-9E3A-8D091D28EE63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F488E5F-6024-4D8A-ACD7-1778AD7BF041}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F488E5F-6024-4D8A-ACD7-1778AD7BF041}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F488E5F-6024-4D8A-ACD7-1778AD7BF041}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F488E5F-6024-4D8A-ACD7-1778AD7BF041}.Release|Any CPU.Build.0 = Release|Any CPU
+		{344D3AA9-6B98-44B2-A971-47841D84199C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{344D3AA9-6B98-44B2-A971-47841D84199C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{344D3AA9-6B98-44B2-A971-47841D84199C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{344D3AA9-6B98-44B2-A971-47841D84199C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E18995C-47F5-43A8-9604-EB0F91E618A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E18995C-47F5-43A8-9604-EB0F91E618A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E18995C-47F5-43A8-9604-EB0F91E618A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E18995C-47F5-43A8-9604-EB0F91E618A7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9072E96D-1F46-4F42-9CC5-FCA900C93AFD}
+	EndGlobalSection
+EndGlobal

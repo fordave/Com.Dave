@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{44FEF11F-C49E-4FDB-91FA-CAB566C565EF}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ConsoleAppSqliteEF</RootNamespace>
+    <AssemblyName>ConsoleAppSqliteEF</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.111.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.111.0\lib\net451\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.111.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.111.0\lib\net451\System.Data.SQLite.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.111.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.111.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\BaseArea.cs" />
+    <Compile Include="Models\BaseBillPush.cs" />
+    <Compile Include="Models\BaseComment.cs" />
+    <Compile Include="Models\BaseContact.cs" />
+    <Compile Include="Models\BaseContactDetail.cs" />
+    <Compile Include="Models\BaseException.cs" />
+    <Compile Include="Models\BaseExportData.cs" />
+    <Compile Include="Models\BaseFile.cs" />
+    <Compile Include="Models\BaseFolder.cs" />
+    <Compile Include="Models\BaseHoliday.cs" />
+    <Compile Include="Models\BaseItem.cs" />
+    <Compile Include="Models\BaseItemDetail.cs" />
+    <Compile Include="Models\BaseKnowledge.cs" />
+    <Compile Include="Models\BaseLog.cs" />
+    <Compile Include="Models\BaseLoginLog.cs" />
+    <Compile Include="Models\BaseMessage.cs" />
+    <Compile Include="Models\BaseMessageRecent.cs" />
+    <Compile Include="Models\BaseModifyRecord.cs" />
+    <Compile Include="Models\BaseModule.cs" />
+    <Compile Include="Models\BaseModule_old.cs" />
+    <Compile Include="Models\BaseNew.cs" />
+    <Compile Include="Models\BaseOrganize.cs" />
+    <Compile Include="Models\BaseOrganizeScope.cs" />
+    <Compile Include="Models\BaseParameter.cs" />
+    <Compile Include="Models\BasePermission.cs" />
+    <Compile Include="Models\BasePermissionScope.cs" />
+    <Compile Include="Models\BaseRole.cs" />
+    <Compile Include="Models\BaseRoleDeleted.cs" />
+    <Compile Include="Models\BaseRoleOrganize.cs" />
+    <Compile Include="Models\BaseSequence.cs" />
+    <Compile Include="Models\BaseStaff.cs" />
+    <Compile Include="Models\BaseStaffOrganize.cs" />
+    <Compile Include="Models\BaseTableColumn.cs" />
+    <Compile Include="Models\BaseUser.cs" />
+    <Compile Include="Models\BaseUserAddress.cs" />
+    <Compile Include="Models\BaseUserContact.cs" />
+    <Compile Include="Models\BaseUserLogOn.cs" />
+    <Compile Include="Models\BaseUserOrganize.cs" />
+    <Compile Include="Models\BaseUserRole.cs" />
+    <Compile Include="Models\BaseUserScore.cs" />
+    <Compile Include="Models\BusinessCard.cs" />
+    <Compile Include="Models\district_area.cs" />
+    <Compile Include="Models\district_city.cs" />
+    <Compile Include="Models\district_province.cs" />
+    <Compile Include="Models\dtproperty.cs" />
+    <Compile Include="Models\FriendFan.cs" />
+    <Compile Include="Models\FriendItem.cs" />
+    <Compile Include="Models\FriendModule.cs" />
+    <Compile Include="Models\FriendPermission.cs" />
+    <Compile Include="Models\FriendPermissionScope.cs" />
+    <Compile Include="Models\FriendRole.cs" />
+    <Compile Include="Models\FriendSupport.cs" />
+    <Compile Include="Models\FriendUserRole.cs" />
+    <Compile Include="Models\HeadhuntingItem.cs" />
+    <Compile Include="Models\HeadhuntingModule.cs" />
+    <Compile Include="Models\HeadhuntingOrganizeScope.cs" />
+    <Compile Include="Models\HeadhuntingPermission.cs" />
+    <Compile Include="Models\HeadhuntingPermissionScope.cs" />
+    <Compile Include="Models\HeadhuntingRole.cs" />
+    <Compile Include="Models\HeadhuntingUserRole.cs" />
+    <Compile Include="Models\ItemsAllowDelete.cs" />
+    <Compile Include="Models\ItemsAllowEdit.cs" />
+    <Compile Include="Models\ItemsAuditIdea.cs" />
+    <Compile Include="Models\ItemsAuditStatu.cs" />
+    <Compile Include="Models\ItemsBugCategory.cs" />
+    <Compile Include="Models\ItemsBugLevel.cs" />
+    <Compile Include="Models\ItemsCondition.cs" />
+    <Compile Include="Models\ItemsDegree.cs" />
+    <Compile Include="Models\ItemsDeletionStateCode.cs" />
+    <Compile Include="Models\ItemsDuty.cs" />
+    <Compile Include="Models\ItemsEditField.cs" />
+    <Compile Include="Models\ItemsEducation.cs" />
+    <Compile Include="Models\ItemsEnabled.cs" />
+    <Compile Include="Models\ItemsGender.cs" />
+    <Compile Include="Models\ItemsIndustry.cs" />
+    <Compile Include="Models\ItemsLeaveCategory.cs" />
+    <Compile Include="Models\ItemsLink.cs" />
+    <Compile Include="Models\ItemsLockWaitMinute.cs" />
+    <Compile Include="Models\ItemsMarriage.cs" />
+    <Compile Include="Models\ItemsNationality.cs" />
+    <Compile Include="Models\ItemsNewsCategory.cs" />
+    <Compile Include="Models\ItemsOrganizeCategory.cs" />
+    <Compile Include="Models\ItemsParty.cs" />
+    <Compile Include="Models\ItemsPriority.cs" />
+    <Compile Include="Models\ItemsRoleCategory.cs" />
+    <Compile Include="Models\ItemsSecurityLevel.cs" />
+    <Compile Include="Models\ItemsSystem.cs" />
+    <Compile Include="Models\ItemsTablePermissionScope.cs" />
+    <Compile Include="Models\ItemsTitle.cs" />
+    <Compile Include="Models\ItemsTrueFalse.cs" />
+    <Compile Include="Models\ItemsUnit.cs" />
+    <Compile Include="Models\ItemsWorkCategory.cs" />
+    <Compile Include="Models\ItemsWorkFlowActivityCategory.cs" />
+    <Compile Include="Models\ItemsWorkFlowActivityName.cs" />
+    <Compile Include="Models\ItemsWorkFlowCategory.cs" />
+    <Compile Include="Models\ItemsWorkingProperty.cs" />
+    <Compile Include="Models\ItemsWorkStatu.cs" />
+    <Compile Include="Models\ItemsYesNo.cs" />
+    <Compile Include="Models\Model1.cs" />
+    <Compile Include="Models\OptionItemsComputerCategory.cs" />
+    <Compile Include="Models\OptionItemsDisability.cs" />
+    <Compile Include="Models\OptionItemsExpress.cs" />
+    <Compile Include="Models\OptionItemsFaPiaoShuXing.cs" />
+    <Compile Include="Models\OptionItemsFuKuanShuXing.cs" />
+    <Compile Include="Models\OptionItemsHousehold.cs" />
+    <Compile Include="Models\OptionItemsOilAlarmFiltering.cs" />
+    <Compile Include="Models\OptionItemsOilDataSource.cs" />
+    <Compile Include="Models\OptionItemsOilEventGroup.cs" />
+    <Compile Include="Models\OptionItemsOilEventType.cs" />
+    <Compile Include="Models\OptionItemsOilEventType_Old.cs" />
+    <Compile Include="Models\OptionItemsOilInstallation.cs" />
+    <Compile Include="Models\OptionItemsOnSale.cs" />
+    <Compile Include="Models\OptionItemsPayCategory.cs" />
+    <Compile Include="Models\OptionItemsPostCategory.cs" />
+    <Compile Include="Models\OptionItemsSalaryItemCategory.cs" />
+    <Compile Include="Models\OptionItemsSendCategory.cs" />
+    <Compile Include="Models\OptionItemsShouFeiLeiXing.cs" />
+    <Compile Include="Models\WorkFlowItem.cs" />
+    <Compile Include="Models\WorkFlowModule.cs" />
+    <Compile Include="Models\WorkFlowOrganizeScope.cs" />
+    <Compile Include="Models\WorkFlowPermission.cs" />
+    <Compile Include="Models\WorkFlowPermissionScope.cs" />
+    <Compile Include="Models\WorkFlowRole.cs" />
+    <Compile Include="Models\WorkFlowUserRole.cs" />
+    <Compile Include="Models\YKGA_AJRYXX.cs" />
+    <Compile Include="Models\YKGA_AJXX.cs" />
+    <Compile Include="Models\YKGA_AreaBind.cs" />
+    <Compile Include="Models\YKGA_BLCYY.cs" />
+    <Compile Include="Models\YKGA_BLMB.cs" />
+    <Compile Include="Models\YKGA_JQXX.cs" />
+    <Compile Include="Models\YKGA_PersonRoomBind.cs" />
+    <Compile Include="Models\YKGA_PersonRoomBind0.cs" />
+    <Compile Include="Models\YKGA_RYAQJCXX.cs" />
+    <Compile Include="Models\YKGA_RYBL.cs" />
+    <Compile Include="Models\YKGA_RYCJXX.cs" />
+    <Compile Include="Models\YKGA_RYWPDJXX.cs" />
+    <Compile Include="Models\YKGA_SACW.cs" />
+    <Compile Include="Models\YKGA_SACWRZ.cs" />
+    <Compile Include="Models\YKGA_SACWZP.cs" />
+    <Compile Include="Models\YKGA_VideoProcess.cs" />
+    <Compile Include="Models\YKGA_ZDXX.cs" />
+    <Compile Include="Models\YKGA_ZDXX0.cs" />
+    <Compile Include="Models\YKSACW_Device.cs" />
+    <Compile Include="Models\YKSACW_WPCZ.cs" />
+    <Compile Include="Models\YKSACW_WPCZMX.cs" />
+    <Compile Include="Models\YKSACW_WPXX.cs" />
+    <Compile Include="Models\YKSACW_WPZP.cs" />
+    <Compile Include="Models\YKSAVR_Audio.cs" />
+    <Compile Include="Models\YKSAVR_BaseCity.cs" />
+    <Compile Include="Models\YKSAVR_BaseDistrict.cs" />
+    <Compile Include="Models\YKSAVR_BaseProvince.cs" />
+    <Compile Include="Models\YKSAVR_CaseTPLink.cs" />
+    <Compile Include="Models\YKSAVR_Department.cs" />
+    <Compile Include="Models\YKSAVR_Device.cs" />
+    <Compile Include="Models\YKSAVR_DeviceChannel.cs" />
+    <Compile Include="Models\YKSAVR_DeviceType.cs" />
+    <Compile Include="Models\YKSAVR_DeviceTypeChannelIndexMap.cs" />
+    <Compile Include="Models\YKSAVR_Dossier.cs" />
+    <Compile Include="Models\YKSAVR_DossierInside.cs" />
+    <Compile Include="Models\YKSAVR_DossierItem.cs" />
+    <Compile Include="Models\YKSAVR_ENoteAnswer.cs" />
+    <Compile Include="Models\YKSAVR_ENoteAsk.cs" />
+    <Compile Include="Models\YKSAVR_ENoteData.cs" />
+    <Compile Include="Models\YKSAVR_ENoteETemplate.cs" />
+    <Compile Include="Models\YKSAVR_ENoteType.cs" />
+    <Compile Include="Models\YKSAVR_GAZZRY.cs" />
+    <Compile Include="Models\YKSAVR_ItemData.cs" />
+    <Compile Include="Models\YKSAVR_OperationType.cs" />
+    <Compile Include="Models\YKSAVR_Phrase.cs" />
+    <Compile Include="Models\YKSAVR_Room.cs" />
+    <Compile Include="Models\YKSAVR_RoomChannel.cs" />
+    <Compile Include="Models\YKSAVR_RoomGroup.cs" />
+    <Compile Include="Models\YKSAVR_RoomGroupMember.cs" />
+    <Compile Include="Models\YKSAVR_RoomPoint.cs" />
+    <Compile Include="Models\YKSAVR_Room_duofangjian.cs" />
+    <Compile Include="Models\YKSAVR_Server.cs" />
+    <Compile Include="Models\YKSAVR_ServerRoom.cs" />
+    <Compile Include="Models\YKSAVR_ServerType.cs" />
+    <Compile Include="Models\YKSAVR_Vendor.cs" />
+    <Compile Include="Models\YKSAVR_VideoFiles.cs" />
+    <Compile Include="Models\YKSAVR_VideoMark.cs" />
+    <Compile Include="Models\YKSAVR_VideoRecord.cs" />
+    <Compile Include="Models\YKSAVR_VideoTP.cs" />
+    <Compile Include="Models\YKSAVR_VideoTrial.cs" />
+    <Compile Include="Models\YKSAVR_VideoTV.cs" />
+    <Compile Include="Models\YKSAVR_ViewGroup.cs" />
+    <Compile Include="Models\YKSAVR_ViewGroupMember.cs" />
+    <Compile Include="Models\YKTV_ArriveReason.cs" />
+    <Compile Include="Models\YKTV_Belongings.cs" />
+    <Compile Include="Models\YKTV_Card.cs" />
+    <Compile Include="Models\YKTV_CaseItemInStock.cs" />
+    <Compile Include="Models\YKTV_CertificateType.cs" />
+    <Compile Include="Models\YKTV_PersonInCase.cs" />
+    <Compile Include="Models\YKTV_PersonInfoCollect.cs" />
+    <Compile Include="Models\YKTV_PersonType.cs" />
+    <Compile Include="Models\YKTV_Photos.cs" />
+    <Compile Include="Models\YKTV_ProcessMode.cs" />
+    <Compile Include="Models\YKTV_ReaderChannel.cs" />
+    <Compile Include="Models\YKTV_ReaderDevice.cs" />
+    <Compile Include="Models\YKTV_ReaderRoom.cs" />
+    <Compile Include="Models\YKTV_RoomReservation.cs" />
+    <Compile Include="Models\YKTV_SaftyCheck.cs" />
+    <Compile Include="Models\YKTV_Trace.cs" />
+    <Compile Include="Models\YKTV_Units.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.111.0\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.111.0\build\net451\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.111.0\build\net451\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.111.0\build\net451\System.Data.SQLite.Core.targets'))" />
+  </Target>
+</Project>
