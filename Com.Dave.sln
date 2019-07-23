@@ -1,13 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleMain", "ConsoleMain\ConsoleMain.csproj", "{E39ED674-0790-48A0-93F3-2FCAFF7FA7AC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebDemo", "WebDemo\WebDemo.csproj", "{63BACC89-A331-4891-8AFD-CBB28A329B7E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfWebDemo", "WpfWebDemo\WpfWebDemo.csproj", "{FD4A0CA4-F898-48BE-8624-8B8DDE19E64C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ASPNETDemo", "ASPNETDemo", "{2E926BE9-8606-4FB8-A942-9D5F0B01628E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoUniversityModelBinding", "ContosoUniversityModelBinding\ContosoUniversityModelBinding.csproj", "{9265AB1D-FF88-430D-842E-7979DA9C99F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,9 +31,16 @@ Global
 		{FD4A0CA4-F898-48BE-8624-8B8DDE19E64C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD4A0CA4-F898-48BE-8624-8B8DDE19E64C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD4A0CA4-F898-48BE-8624-8B8DDE19E64C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9265AB1D-FF88-430D-842E-7979DA9C99F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9265AB1D-FF88-430D-842E-7979DA9C99F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9265AB1D-FF88-430D-842E-7979DA9C99F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9265AB1D-FF88-430D-842E-7979DA9C99F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9265AB1D-FF88-430D-842E-7979DA9C99F6} = {2E926BE9-8606-4FB8-A942-9D5F0B01628E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7BC2D0CC-7A16-415A-A733-AEBC4E24A8DA}
