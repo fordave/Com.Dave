@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfWebDemo"
+        xmlns:local1="clr-namespace:WpfWebDemo.UserControls"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Window.Resources>
@@ -39,6 +40,14 @@
             <Button Margin="30" Template="{StaticResource buttonTemplate}" 
                     Content="aaaa" HorizontalAlignment="Center">
             </Button>
+            <TabControl>
+                <TabItem Header="1">
+                    <local:MultipleSeriesView Height="700" Width="1000"/>
+                </TabItem>
+                <TabItem Header="2">
+                    <local1:MaterialCards Height="700" Width="1000"/>
+                </TabItem>
+            </TabControl>
         </StackPanel>
     </Grid>
 </Window>
