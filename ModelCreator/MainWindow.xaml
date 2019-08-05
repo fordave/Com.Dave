@@ -1,0 +1,101 @@
+﻿<Window xmlns:Views="clr-namespace:ModelCreator.Views"  x:Class="ModelCreator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ModelCreator"
+        xmlns:viewmodels="clr-namespace:ModelCreator.ViewModels"
+        mc:Ignorable="d"
+        Title="ModelCreator" Height="600" Width="800">
+    <Window.DataContext>
+        <viewmodels:ViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Height="100">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal" Grid.Row="0">
+                <Label Content="tablename:" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBox Width="150" Margin="10" Height="30" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding TableName, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                <Button x:Name="save" Content="save" Command="{Binding SaveCommand}" VerticalAlignment="Center"   Margin="10" />
+                <Button Content="load" Command="{Binding LoadCommand}" VerticalAlignment="Center"  Margin="10"/>
+                <Button Content="tostring" Command="{Binding  ToStringCommand}" VerticalAlignment="Center"  Margin="10"/>
+                <Button Content="clearall" Command="{Binding  ClearFieldCommand}" VerticalAlignment="Center"  Margin="10"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <DockPanel>
+                    <TextBox Height="200" Text="{Binding Tostring}" DockPanel.Dock="Bottom"/>
+                    <DataGrid RowHeaderWidth="70" AutoGenerateColumns="False" SelectedItem="{Binding SelectedFieldItem}" ItemsSource="{Binding FieldItems}" Grid.Column="1" >
+                        <DataGrid.Resources>
+                            <DataTemplate x:Key="CompanyDisplayTemplate" DataType="vm:TypeItem">
+                                <TextBlock Text="{Binding Company}" />
+                            </DataTemplate>
+                            <DataTemplate x:Key="CompanyEditingTemplate" DataType="vm:TypeItem">
+                                <ComboBox SelectedItem="{Binding Company}" ItemsSource="{Binding CompanyList}" />
+                            </DataTemplate>
+                        </DataGrid.Resources>
+                        <DataGrid.Columns>
+                            <DataGridCheckBoxColumn Width="40" Binding="{Binding IsChecked, UpdateSourceTrigger=PropertyChanged}" Header=""/>
+                            <DataGridTextColumn Width="200" Binding="{Binding FieldName}" Header="属性名字"/>
+                            <DataGridTemplateColumn Width="100" CellTemplate="{StaticResource CompanyDisplayTemplate}"
+                                CellEditingTemplate="{StaticResource CompanyEditingTemplate}"   Header="字段类型"/>
+                            <DataGridTextColumn Width="*" Binding="{Binding Description}" Header="属性描述"/>
+                        </DataGrid.Columns>
+                        <DataGrid.ContextMenu>
+                            <ContextMenu Name="delete"  >
+                                <MenuItem Header="delete" Command="{Binding DeleteCommand}" />
+                            </ContextMenu>
+                        </DataGrid.ContextMenu>
+                        <DataGrid.RowStyle>
+                            <Style TargetType="DataGridRow">                               
+                                <Setter Property="Height" Value="30"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="Yellow"/>
+                                        <Setter Property="Foreground" Value="Black"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.RowStyle>
+                    </DataGrid>
+                  
+                </DockPanel>
+            </Grid>
+            <DockPanel Grid.Column="0">
+                <Label DockPanel.Dock="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                    <TextBlock Text="表名"  Foreground="Red" />
+                </Label>
+                <ListBox DockPanel.Dock="Bottom" ItemsSource="{Binding Files}" SelectedItem="{Binding TableName}">
+                    <ListBox.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="移除当前" Command="{Binding RemoveTableCommand}"></MenuItem>
+                        </ContextMenu>
+                    </ListBox.ContextMenu>
+                    <ListBox.ItemContainerStyle>
+                        <Style TargetType="{x:Type ListBoxItem}">
+                            <Setter Property="Margin" Value="4"/>
+                            <Setter Property="Padding" Value="4"/>
+                        </Style>
+                    </ListBox.ItemContainerStyle>
+                </ListBox>
+            </DockPanel>
+          
+        </Grid>
+
+
+    </Grid>
+</Window>
