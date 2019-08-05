@@ -143,9 +143,37 @@
     </Compile>
     <Compile Include="Logging\ILogger.cs" />
     <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Migrations\201908050738022_init.cs" />
+    <Compile Include="Migrations\201908050738022_init.Designer.cs">
+      <DependentUpon>201908050738022_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908050812121_initial2.cs" />
+    <Compile Include="Migrations\201908050812121_initial2.Designer.cs">
+      <DependentUpon>201908050812121_initial2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908050857017_maxlengthonname.cs" />
+    <Compile Include="Migrations\201908050857017_maxlengthonname.Designer.cs">
+      <DependentUpon>201908050857017_maxlengthonname.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908050858194_ColumnFirstName.cs" />
+    <Compile Include="Migrations\201908050858194_ColumnFirstName.Designer.cs">
+      <DependentUpon>201908050858194_ColumnFirstName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908050919318_ComplexDataModel.cs" />
+    <Compile Include="Migrations\201908050919318_ComplexDataModel.Designer.cs">
+      <DependentUpon>201908050919318_ComplexDataModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908050924261_ComplexDataModel1.cs" />
+    <Compile Include="Migrations\201908050924261_ComplexDataModel1.Designer.cs">
+      <DependentUpon>201908050924261_ComplexDataModel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Enrollment.cs" />
     <Compile Include="DAL\SchoolContext.cs" />
+    <Compile Include="Models\Instructor.cs" />
+    <Compile Include="Models\OfficeAssignment.cs" />
     <Compile Include="ViewModels\EnrollmentDateGroup.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -208,6 +236,26 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201908050738022_init.resx">
+      <DependentUpon>201908050738022_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908050812121_initial2.resx">
+      <DependentUpon>201908050812121_initial2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908050857017_maxlengthonname.resx">
+      <DependentUpon>201908050857017_maxlengthonname.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908050858194_ColumnFirstName.resx">
+      <DependentUpon>201908050858194_ColumnFirstName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908050919318_ComplexDataModel.resx">
+      <DependentUpon>201908050919318_ComplexDataModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908050924261_ComplexDataModel1.resx">
+      <DependentUpon>201908050924261_ComplexDataModel1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
