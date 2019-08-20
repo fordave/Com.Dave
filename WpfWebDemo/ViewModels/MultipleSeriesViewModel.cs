@@ -17,8 +17,8 @@ namespace WpfWebDemo.ViewModels
             Series = new SeriesCollection();
             var r = new Random();
 
-            var count = 10;
-            var length = 1000;
+            var count = 1;
+            var length = 1;
             for (var i = 0; i < count; i++) // 30 series
             {
                 var trend = 0d;

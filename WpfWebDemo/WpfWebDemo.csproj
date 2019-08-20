@@ -64,6 +64,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CallBackFuncs.cs" />
+    <Compile Include="DEVICE_INFO.cs" />
+    <Compile Include="HWSignApi.cs" />
+    <Compile Include="HWTabletRect.cs" />
+    <Compile Include="TOUCH_INFO.cs" />
     <Compile Include="UserControls\MultipleSeriesView.xaml.cs">
       <DependentUpon>MultipleSeriesView.xaml</DependentUpon>
     </Compile>
@@ -119,6 +124,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GAJTSign_v1.0.0.7.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -12,7 +12,7 @@
             <Border x:Name="border" BorderBrush="BlanchedAlmond" Background="black" 
                     BorderThickness="4" CornerRadius="2" TextBlock.TextAlignment="Center"
                     TextBlock.Foreground="Red" TextBlock.FontStyle="Italic" Width="100" TextBlock.FontSize="20">
- <ContentPresenter RecognizesAccessKey="True" Margin="{TemplateBinding Padding}" />
+                <ContentPresenter RecognizesAccessKey="True" Margin="{TemplateBinding Padding}" />
             </Border>
             <ControlTemplate.Triggers>
                 <Trigger Property="IsMouseOver" Value="true">
@@ -40,12 +40,17 @@
             <Button Margin="30" Template="{StaticResource buttonTemplate}" 
                     Content="aaaa" HorizontalAlignment="Center">
             </Button>
+            <Button Click="Button_Click" Content="save" HorizontalAlignment="Center">
+            </Button>
             <TabControl>
                 <TabItem Header="1">
                     <local:MultipleSeriesView Height="700" Width="1000"/>
                 </TabItem>
                 <TabItem Header="2">
                     <local1:MaterialCards Height="700" Width="1000"/>
+                </TabItem>
+                <TabItem Header="3">
+                    <InkCanvas x:Name="inkCanvas"  TouchMove="InkCanvas_TouchMove" StylusMove="InkCanvas_StylusMove" MouseMove="InkCanvas_MouseMove"></InkCanvas>
                 </TabItem>
             </TabControl>
         </StackPanel>

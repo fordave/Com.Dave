@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using YKBLClient.HanvonSdk;
 
 namespace WpfWebDemo
 {
@@ -23,6 +24,33 @@ namespace WpfWebDemo
         public MainWindow()
         {
             InitializeComponent();
+            HWSignApi.RegisterTouchInfoCallBack(new callBackTouchInfoFunc(TouchOver));
+        }
+
+        private int TouchOver(IntPtr ptr)
+        {
+          var tt=  HWSignApi.GetDeviceStatus();
+            return tt;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Title = "ss";
+        }
+
+        private void InkCanvas_TouchMove(object sender, TouchEventArgs e)
+        {
+
+        }
+
+        private void InkCanvas_StylusMove(object sender, StylusEventArgs e)
+        {
+
+        }
+
+        private void InkCanvas_MouseMove(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }

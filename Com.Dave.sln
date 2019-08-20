@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoUniversity", "Contos
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelCreator", "ModelCreator\ModelCreator.csproj", "{C8125631-3FF7-43CF-A9AD-0EDC380BC095}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HWSignTest", "HWSignTest\HWSignTest.csproj", "{A02ED89D-1455-4080-B154-043AB1B3FDFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{C8125631-3FF7-43CF-A9AD-0EDC380BC095}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8125631-3FF7-43CF-A9AD-0EDC380BC095}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8125631-3FF7-43CF-A9AD-0EDC380BC095}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A02ED89D-1455-4080-B154-043AB1B3FDFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A02ED89D-1455-4080-B154-043AB1B3FDFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A02ED89D-1455-4080-B154-043AB1B3FDFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A02ED89D-1455-4080-B154-043AB1B3FDFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
