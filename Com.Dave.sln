@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelCreator", "ModelCreato
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HWSignTest", "HWSignTest\HWSignTest.csproj", "{A02ED89D-1455-4080-B154-043AB1B3FDFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RotateImage", "RotateImage\RotateImage.csproj", "{11F08CA9-092B-4FF7-997B-EA7296464FDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{A02ED89D-1455-4080-B154-043AB1B3FDFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A02ED89D-1455-4080-B154-043AB1B3FDFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A02ED89D-1455-4080-B154-043AB1B3FDFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11F08CA9-092B-4FF7-997B-EA7296464FDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11F08CA9-092B-4FF7-997B-EA7296464FDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11F08CA9-092B-4FF7-997B-EA7296464FDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11F08CA9-092B-4FF7-997B-EA7296464FDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
